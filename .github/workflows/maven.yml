@@ -44,9 +44,9 @@ jobs:
         #export ${JAVA_HOME}/jre
         java --version
         mvn --version
-        mvn install
-        mvn compile
-        #mvn -B package --file pom.xml
+        #mvn install
+        #mvn compile
+        mvn -B package --file pom.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
