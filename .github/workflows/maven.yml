@@ -35,8 +35,10 @@ jobs:
         distribution: 'temurin'
     - name: Build with Maven
       run: |-
-        tree ${JAVA_HOME}
+        sudo apt update
+        sudo apt install tree -y
         echo ${JAVA_HOME}
+        tree ${JAVA_HOME}
         ${JAVA_HOME}/bin/java --version
         export PATH=${JAVA_HOME}/bin:$PATH
         export ${JAVA_HOME}/jre
