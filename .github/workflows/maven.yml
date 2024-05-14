@@ -33,22 +33,24 @@ jobs:
       with:
         java-version: '8'
         distribution: 'temurin'
-        run: |-
-          echo ${JAVA_HOME}
-          echo "MAVEN_HOME"
-          echo ${MAVEN_HOME}
-          sudo apt update
-          sudo apt install tree -y
+        
+    - name: nvn compile
+      run: |-
+        echo ${JAVA_HOME}
+        echo "MAVEN_HOME"
+        echo ${MAVEN_HOME}
+        sudo apt update
+        sudo apt install tree -y
 
-          tree ${JAVA_HOME}
-          #${JAVA_HOME}/bin/java --version
-          export PATH=${JAVA_HOME}/bin:$PATH
-          export ${JAVA_HOME}/jre
-          #java --version
-          #mvn --version
-          #mvn install
-          #mvn compile
-          #mvn -B package --file pom.xml
+        tree ${JAVA_HOME}
+        #${JAVA_HOME}/bin/java --version
+        export PATH=${JAVA_HOME}/bin:$PATH
+        export ${JAVA_HOME}/jre
+        #java --version
+        #mvn --version
+        #mvn install
+        #mvn compile
+        #mvn -B package --file pom.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
