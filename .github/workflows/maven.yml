@@ -52,13 +52,13 @@ jobs:
         ls -al ${JAVA_HOME}/bin/java
         ls -al ${JAVA_HOME}/bin/javac
         echo "================="
-        java -v
 
         tree ${JAVA_HOME}
         #${JAVA_HOME}/bin/java --version
         export PATH="${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH"
-        java -v
+
         java --version
+        java -v
         mvn --version
         #mvn install
         #mvn compile
