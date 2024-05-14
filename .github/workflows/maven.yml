@@ -57,6 +57,7 @@ jobs:
         #${JAVA_HOME}/bin/java --version
         export PATH="${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH"
 
+        java -version
         java --version
         java -v
         mvn --version
