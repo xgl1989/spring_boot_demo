@@ -54,15 +54,12 @@ jobs:
         echo "================="
 
         tree ${JAVA_HOME}
-        #${JAVA_HOME}/bin/java --version
         export PATH="${JAVA_HOME}/bin:${JAVA_HOME}/jre/bin:$PATH"
 
         java -version
-        java --version
-        java -v
         mvn --version
-        #mvn install
-        #mvn compile
+        mvn install
+        mvn compile
         #mvn -B package --file pom.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
