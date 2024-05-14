@@ -44,8 +44,12 @@ jobs:
         sudo apt install maven -y
 
         mvn --version
+        mvn help:system
+        mvn install
+        
         ls -al ${JAVA_HOME}/bin/java
         ls -al ${JAVA_HOME}/bin/javac
+        ${JAVA_HOME}/bin/java -v
         echo "================="
 
         tree ${JAVA_HOME}
