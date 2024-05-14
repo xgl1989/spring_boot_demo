@@ -41,13 +41,14 @@ jobs:
         echo ${MAVEN_HOME}
         sudo apt update
         sudo apt install tree -y
+        sudo apt install maven -y
 
         tree ${JAVA_HOME}
         #${JAVA_HOME}/bin/java --version
         export PATH=${JAVA_HOME}/bin:$PATH
         export ${JAVA_HOME}/jre
-        #java --version
-        #mvn --version
+        java --version
+        mvn --version
         #mvn install
         #mvn compile
         #mvn -B package --file pom.xml
