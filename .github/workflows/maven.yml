@@ -46,8 +46,18 @@ jobs:
 
         npm -v
         mvn --version
-        #mvn help:system
-        #mvn install
+        
+        echo "===============mvn help:system start================"
+        mvn help:system
+        echo "===============mvn help:system end================"
+        echo "=============mvn install start==============="
+        mvn install
+        echo "=============mvn install end==============="
+
+        npm -v
+        echo "=============npm install start==============="
+        npm install
+        echo "=============npm install end==============="
         
         ls -al ${JAVA_HOME}/bin/java
         ls -al ${JAVA_HOME}/bin/javac
